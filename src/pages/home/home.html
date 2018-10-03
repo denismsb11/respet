@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>RESPET</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="card-background-page">
+    <ion-card (click)="iccConteudos()">
+      <img src="assets/imgs/programmer.png" />
+      <div class="card-title">ICC</div>
+    </ion-card>
+
+    <ion-card (click)="calculo1Conteudos()">
+      <img src="assets/imgs/discret.jpg" />
+      <div class="card-title">Cálculo I</div>
+    </ion-card>
+
+    <ion-card (click)="matDiscretaConteudos()">
+      <img src="assets/imgs/math.jpg" />
+      <div class="card-title">Matemática Discreta</div>
+    </ion-card>
+
+    <ion-card (click)="gaConteudos()">
+      <img src="assets/imgs/geomath.jpg" />
+      <div class="card-title">Geometria Analítica</div>
+    </ion-card>
+
+</ion-content>
