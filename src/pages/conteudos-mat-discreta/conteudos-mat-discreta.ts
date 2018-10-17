@@ -1,12 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the ConteudosMatDiscretaPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { MatDiscretaSeEntaoPage } from '../mat-discreta-se-entao/mat-discreta-se-entao';
 
 @IonicPage()
 @Component({
@@ -20,6 +14,10 @@ export class ConteudosMatDiscretaPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ConteudosMatDiscretaPage');
+  }
+
+  abrirSeEntao(){
+    this.navCtrl.push(MatDiscretaSeEntaoPage)
   }
 
 }

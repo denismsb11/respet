@@ -3,7 +3,6 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { IccIntroPage } from '../icc-intro/icc-intro';
 import { IccProgramacaoPage } from '../icc-programacao/icc-programacao';
 
-
 @IonicPage()
 @Component({
   selector: 'page-conteudos-icc',

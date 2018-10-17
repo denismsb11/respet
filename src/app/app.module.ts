@@ -19,6 +19,8 @@ import { Calculo1FuncoesPage } from '../pages/calculo1-funcoes/calculo1-funcoes'
 import { Calculo1LimitesPage } from '../pages/calculo1-limites/calculo1-limites';
 import { Calculo1DerivadasPage } from '../pages/calculo1-derivadas/calculo1-derivadas';
 import { Calculo1DerivadasDefinicoesPage } from '../pages/calculo1-derivadas-definicoes/calculo1-derivadas-definicoes';
+import { MatDiscretaSeEntaoPage } from '../pages/mat-discreta-se-entao/mat-discreta-se-entao';
+import { AccordionComponent } from '../components/accordion/accordion'
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { Calculo1DerivadasDefinicoesPage } from '../pages/calculo1-derivadas-def
     Calculo1FuncoesPage,
     Calculo1LimitesPage,
     Calculo1DerivadasPage,
-    Calculo1DerivadasDefinicoesPage
+    Calculo1DerivadasDefinicoesPage,
+    MatDiscretaSeEntaoPage,
+    AccordionComponent
   ],
   imports: [
     BrowserModule,
@@ -56,8 +60,8 @@ import { Calculo1DerivadasDefinicoesPage } from '../pages/calculo1-derivadas-def
     Calculo1FuncoesPage,
     Calculo1LimitesPage,
     Calculo1DerivadasPage,
-    Calculo1DerivadasDefinicoesPage
-
+    Calculo1DerivadasDefinicoesPage,
+    MatDiscretaSeEntaoPage,
   ],
   providers: [
     StatusBar,
