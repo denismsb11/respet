@@ -9,20 +9,52 @@ import { IccProgramacaoPage } from '../icc-programacao/icc-programacao';
   templateUrl: 'conteudos-icc.html',
 })
 export class ConteudosIccPage {
+  items: any = [];
+  itemExpandHeight: number = 100;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.items = [
+      { expanded: false },
+      { expanded: false },
+      { expanded: false },
+      { expanded: false },
+      { expanded: false },
+      { expanded: false },
+      { expanded: false },
+      { expanded: false },
+      { expanded: false }
+    ];
+
+  }
+
+  expandItem(item) {
+
+    this.items.map((listItem) => {
+
+      if (item == listItem) {
+        listItem.expanded = !listItem.expanded;
+      } else {
+        listItem.expanded = false;
+      }
+
+      return listItem;
+
+    });
+
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ConteudosIccPage');
   }
 
-  iccIntro(){
+  iccIntro() {
     this.navCtrl.push(IccIntroPage)
   }
-  
-  iccProgramacao(){
+
+  iccProgramacao() {
     this.navCtrl.push(IccProgramacaoPage)
   }
+
+
 
 }

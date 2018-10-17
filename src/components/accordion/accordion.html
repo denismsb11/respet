@@ -1,9 +1,3 @@
-<ion-card>
-  <ion-card-header (click)="toogleAccordion()">
-    <ion-card-content>
-      <ion-list>
-        <ion-item></ion-item>
-      </ion-list>
-    </ion-card-content>
-  </ion-card-header>
-</ion-card>
+<div #expandWrapper class='expand-wrapper' [class.collapsed]="!expanded">
+  <ng-content></ng-content>
+</div>

@@ -1,29 +1,19 @@
-import { Component, ViewChild, OnInit, Renderer } from '@angular/core';
+import { Component, ViewChild, Renderer, Input, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'accordion',
   templateUrl: 'accordion.html'
 })
-export class AccordionComponent implements OnInit {
-
-  accordionExpanded = false
-  @ViewChild("cc") CardContent: any
+export class AccordionComponent {
+  @ViewChild('expandWrapper', { read: ElementRef }) expandWrapper;
+  @Input('expanded') expanded;
+  @Input('expandHeight') expandHeight;
 
   constructor(public renderer: Renderer) {
+
   }
 
-  ngOnInit(){
-    this.renderer.setElementStyle(this.CardContent.nativeElement, "webkitTransition","max-height 500ms, padding 500px")
-  }
-
-  toggleAccordion(){
-    if(this.accordionExpanded){
-      this.renderer.setElementStyle(this.CardContent.nativeElement, "max-height", "0px")
-    }
-    else{
-      this.renderer.setElementStyle(this.CardContent.nativeElement, "max-height", "500px")
-    }
-
-    this.accordionExpanded = !this.accordionExpanded
+  ngAfterViewInit() {
+    this.renderer.setElementStyle(this.expandWrapper.nativeElement, 'height', this.expandHeight + 'px');
   }
 }
